@@ -70,7 +70,7 @@ lint-go:
 textlint: lint-text
 lint-text:
 	@echo "running textlint..."
-	@docker run -it --rm -v $$PWD:/work -w /work ghcr.io/sacloud/textlint-action:$(TEXTLINT_ACTION_VERSION) .
+	@docker run -t --rm -v $$PWD:/work -w /work ghcr.io/sacloud/textlint-action:$(TEXTLINT_ACTION_VERSION) .
 
 .PHONY: lint-action
 lint-action:
