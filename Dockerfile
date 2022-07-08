@@ -30,10 +30,10 @@ ENV CGO_ENABLED 0
 RUN make tools build
 # ======
 
-FROM alpine:3.12
+FROM alpine:3.15
 MAINTAINER Usacloud Authors <sacloud.users@gmail.com>
 
 RUN apk add --no-cache --update ca-certificates
-COPY --from=builder /go/src/github.com/sacloud/usacloud/bin/usacloud /usr/bin/
+COPY --from=builder /go/src/github.com/sacloud/go-template/go-template /usr/bin/
 
-ENTRYPOINT ["/usr/bin/usacloud"]
+ENTRYPOINT ["/usr/bin/go-template"]

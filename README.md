@@ -10,6 +10,10 @@
 
 さくらのクラウド向けOSSプロダクトでGo言語を中心に用いるプロジェクトのためのテンプレート
 
+### DockerイメージをGitHub Container Registryで公開する際の注意点
+
+初回のみ手作業で公開する必要があります。オーガニゼーション管理者にご相談ください。
+
 ## License
 
 `go-template` Copyright (C) 2022 The sacloud/go-template authors.
