@@ -35,5 +35,5 @@ find . -type f | xargs sed -i '' -e "s/go-template/example/g"
 
 ## License
 
-`go-template` Copyright (C) 2022 The sacloud/go-template authors.
+`go-template` Copyright (C) 2022-2023 The sacloud/go-template authors.
 This project is published under [Apache 2.0 License](LICENSE).
