@@ -21,6 +21,7 @@ import (
 )
 
 func main() {
+	//  test1
 	fmt.Println("ALEA IACTA EST")
 	fmt.Println("version", version.FullVersion())
 }
