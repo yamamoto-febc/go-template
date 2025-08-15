@@ -14,5 +14,19 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - uses: Songmu/tagpr@v1
+      id: tagpr
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Set up Go
+      uses: actions/setup-go@v5
+      with:
+        go-version-file: 'go.mod'
+      if: ${{ steps.tagpr.outputs.tag != ''}}
+    - name: Run GoReleaser
+      uses:  goreleaser/goreleaser-action@v6
+      with:
+        version: '~> v2'
+        args: release  --clean
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      if: ${{ steps.tagpr.outputs.tag != ''}}
